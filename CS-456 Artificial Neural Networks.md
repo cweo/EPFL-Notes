@@ -218,6 +218,80 @@ Take neural networks with many layers, optimized by Backprop as an example of de
 
 
 
+### Lecture 6: Sequences and Recurrent Networks
+
+Quiz: Sequences
+
+[  ] In texts, the longest temporal dependence is about 10-20 words. 
+
+[  ] Training data for text sequences is scarce and costly because it needs labeling.
+
+[x] Training data for video frame prediction is cheap, because there are thousands of videos on the internet and no labeling is needed
+
+[  ] Target values in sequence tasks are always high-dimensional.
+
+[  ] In video frame prediction, if I take the last 1000 frames as input, I am sure to be on the safe side (I am sure to cover all potential temporal dependencies)
+
+
+
+Quiz: Unfolding of Recurrent Networks
+
+We process a sequence of length T.
+
+[x] When processing a sequence of length T, a recurrent network with one hidden layer can always be reformulated as a deep feedforward network.
+
+[ ] A recurrent network with one hidden layer of n neurons leads to an unfolded feedforward network with n layers of n neurons each.
+
+[x] A recurrent network with one hidden layer of n neurons leads to an unfolded feedforward network with T hidden layers
+
+[x]  The unfolded network corresponds to a feedforward network with weight sharing.
+
+[x] The unfolded network corresponds to a feedforward network where inputs have direct short-cut connections to all hidden layers.
+
+
+
+Quiz: Vanishing Gradient Problem
+
+The vanishing gradient problem of recurrent network means that
+
+[  ] the derivative of the gain function vanishes: g’ = 0
+
+[x] that the output error at time t contains only very little information about input at an earlier time step t-k if k>10
+
+[x] that $|g'w_{ji}^{(lat)}|^k = 0$ for k>10
+
+
+
+### Lecture 7: CNN
+
+Quiz: Inductive bias
+
+ [x ] With a strong inductive bias one can reach a low test error with very little training data.
+
+ [ ] With a strong inductive bias the test error will always be low.
+
+ [x ] Data augmentation is a heuristic method to get more training data.
+
+ [x ] In data augmentation there is an inductive bias in the form of our assumptions about reasonable transformations.
+
+ [x ] Choosing a specific neural network architecture is choosing an explicit inductive bias.
+
+
+
+Quiz:
+
+ [x ] The number of weights in a convolutional layer with 10 filters of size 5x5x3 is 750 (excluding biases).
+
+ [x ] The number of weights in a convolutional layer does not depend on the size of the x-y dimension of input layer.
+
+ [ ] The number of outputs of a convolutional layer with 10 filters of size 5x5x3 is 250.
+
+ [ ] Convolutional layers are also equivariant under rotations of the image.
+
+ [ ] Max pooling layers are also likely to be invariant under rotations of the image.
+
+ [ ] You have a dataset of centered portraits (passport photos) on white background. The equivariance property of ConvNets is a good inductive bias for this dataset.
+
 
 
 ### Lecture 8: Reinforcement Learning and SARSA
